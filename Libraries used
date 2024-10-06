@@ -1,0 +1,19 @@
+
+The code above uses two libraries:
+
+json:
+
+This is a built-in Python library and doesn't require separate installation. It is used for working with JSON data (converting JSON strings to Python dictionaries and vice versa).
+urllib.request:
+
+This is also a built-in Python library and does not require separate installation. It is used for sending HTTP requests (such as fetching data from a URL).
+
+__________________________________________________________________________________
+کد بالا از دو کتابخانه استفاده کرده است:
+
+json:
+
+این کتابخانه پیش‌فرض و داخلی پایتون است و نیازی به نصب جداگانه ندارد. برای کار با داده‌های JSON (تبدیل رشته‌های JSON به دیکشنری پایتون و برعکس) استفاده می‌شود.
+urllib.request:
+
+این کتابخانه نیز پیش‌فرض و داخلی پایتون است و نیازی به نصب جداگانه ندارد. از آن برای ارسال درخواست‌های HTTP (مثل دریافت داده از یک URL) استفاده می‌شود.
