@@ -1,0 +1,20 @@
+ The API used is from the United States Geological Survey (USGS), which provides real-time earthquake data. USGS is a well-known and trusted source for geological information, including global earthquake data. The API allows users to retrieve earthquake information in various formats, including GeoJSON.
+
+API URL: urlData = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
+This URL points to a GeoJSON file that provides information about earthquakes with a magnitude of 2.5 or greater from the past day.
+
+Data Structure:
+The USGS earthquake API returns data in the GeoJSON format, which is a widely used standard for geographic data. The returned data includes the following key components:
+
+metadata: Contains metadata about the request, including the title, count of recorded events, and more.
+features: A list of earthquake events, each with attributes such as the location of the earthquake, magnitude (mag), number of felt reports, and other related information.
+API Workflow:
+The code uses urllib.request to send an HTTP request to the API. After receiving the response (which is indicated by a status code of 200, meaning the request was successful), the data is read and parsed into JSON format.
+
+This API is publicly available and provided for free by USGS, allowing access to up-to-date earthquake data across the globe. It enables users to retrieve and display earthquake details such as magnitude, location, and reports of whether people felt the earthquake.
+
+
+
+
+
+
