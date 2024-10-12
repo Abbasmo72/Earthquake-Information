@@ -1,5 +1,5 @@
  The API used is from the United States Geological Survey (USGS), which provides real-time earthquake data. USGS is a well-known and trusted source for geological information, including global earthquake data. The API allows users to retrieve earthquake information in various formats, including GeoJSON.
-
+Web Site : https://www.usgs.gov/programs/earthquake-hazards
 API URL: urlData = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
 This URL points to a GeoJSON file that provides information about earthquakes with a magnitude of 2.5 or greater from the past day.
 
