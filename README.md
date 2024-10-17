@@ -29,6 +29,7 @@ The code uses the following libraries:
 ## JSON: What is it and How Does it Work?
 JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used for transmitting data in web applications between a server and a client.
 In Python, the json library is used to decode JSON data into a Python dictionary, allowing the program to easily access and manipulate the data.
+<hr>
 
 ## How the Code Works (Step-by-Step Breakdown):
 
