@@ -3,7 +3,7 @@ This script is designed to fetch earthquake data from the USGS (United States Ge
 
 [SeismoWatch.py](SeismoWatch.py)
 
-## Finding Information
+## Finding Information:
 The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
 
 <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson" target="_blank">View Earthquake Data</a>
