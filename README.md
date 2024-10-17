@@ -3,6 +3,22 @@ This script is designed to fetch earthquake data from the USGS (United States Ge
 
 [SeismoWatch.py](SeismoWatch.py)
 
+## finding information
+The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
+
+<a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson" target="_blank">View Earthquake Data</a>
+
+This URL provides a GeoJSON feed that contains data about recent earthquakes. The specific information passed to the code includes:
+1. Metadata: This includes the title of the data set and the count of recorded earthquake events.
+2. Features: This section provides details about each earthquake, including:
+   Place: The geographical location of the earthquake.<br>
+  Magnitude: The strength of the earthquake, which is used to filter significant events (magnitude ≥ 4.0).<br>
+  Felt Reports: The number of reports from people who felt the earthquake, if available.
+
+The code processes this data to display the title, total number of recorded events, locations of all earthquakes, locations of significant earthquakes (magnitude ≥ 4.0), and details of earthquakes that were felt by people, along with the count of such reports.
+
+
+
 ## Libraries:
 The code uses the following libraries:
 1. json:
