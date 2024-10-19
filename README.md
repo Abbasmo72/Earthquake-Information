@@ -31,7 +31,7 @@ JSON (JavaScript Object Notation) is a lightweight data-interchange format that 
 In Python, the json library is used to decode JSON data into a Python dictionary, allowing the program to easily access and manipulate the data.
 <hr>
 
-## How the Code Works (Step-by-Step):
+## How the Code Works (Step-by-Step Breakdown):
 
 1. Import Libraries:
 ```python
