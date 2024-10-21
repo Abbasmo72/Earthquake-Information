@@ -1,7 +1,17 @@
+<div align="center">
+
+## Earthquake information
+
+<img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/2019/02/Hero-Earthquake-Proof-Buildings.gif" height="250px" width="600px">
+</div>
+<hr>
+
+
+
 ## Overview of the Code:
 This script is designed to fetch earthquake data from the USGS (United States Geological Survey) using a GeoJSON feed, parse the JSON response, and print relevant information such as the number of events and locations where earthquakes have been felt.
 
-[SeismoWatch.py](SeismoWatch.py)
+[Seismo Watch](SeismoWatch.py)
 
 ## Finding Information:
 The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
@@ -170,4 +180,9 @@ Locations of all recorded events
 Locations of events with a magnitude of 4.0 or greater
 Locations and counts of events that were felt by people.
 
+<hr>
+
+## License
+
+MIT
 
