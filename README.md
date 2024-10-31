@@ -2,12 +2,12 @@
 
 ## Earthquake information
 
-<img src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/2019/02/Hero-Earthquake-Proof-Buildings.gif" height="250px" width="600px">
+<img alt="Gif" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/2019/02/Hero-Earthquake-Proof-Buildings.gif" height="250px" width="600px">
 </div>
 <hr>
-link persi
-<hr>
 
+[Click to see the descriptions in Persian language](Persian.md)
+<hr>
 
 ## Overview of the Code:
 This script is designed to fetch earthquake data from the USGS (United States Geological Survey) using a GeoJSON feed, parse the JSON response, and print relevant information such as the number of events and locations where earthquakes have been felt.
