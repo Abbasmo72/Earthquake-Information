@@ -175,11 +175,11 @@ if __name__ == "__main__":
 
 ## Conclusion:
 This script retrieves real-time earthquake data from the USGS and processes it to display key information about recent earthquakes, such as:
-Title of the dataset
-Total number of events
-Locations of all recorded events
-Locations of events with a magnitude of 4.0 or greater
-Locations and counts of events that were felt by people.
+- Title of the dataset
+- Total number of events
+- Locations of all recorded events
+- Locations of events with a magnitude of 4.0 or greater
+- Locations and counts of events that were felt by people.
 
 <hr>
 
