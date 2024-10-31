@@ -1,99 +1,98 @@
 <div align="center">
 
-## Earthquake information
+## اطلاعات زلزله
 
 <img alt="Gif" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/2019/02/Hero-Earthquake-Proof-Buildings.gif" height="250px" width="600px">
 </div>
 <hr>
 
-[Click to see the descriptions in Persian language](Persian.md)
+[Click to see the descriptions in English language](README.md)
 <hr>
 
-## Overview of the Code:
-This script is designed to fetch earthquake data from the USGS (United States Geological Survey) using a GeoJSON feed, parse the JSON response, and print relevant information such as the number of events and locations where earthquakes have been felt.
+## مروری بر کد:
+این اسکریپت برای واکشی داده‌های زلزله از USGS (سازمان زمین‌شناسی ایالات متحده) با استفاده از فید GeoJSON، تجزیه پاسخ JSON و چاپ اطلاعات مرتبط مانند تعداد رویدادها و مکان‌هایی که زمین‌لرزه‌ها در آن‌ها احساس شده‌اند، طراحی شده است.
 
-[Seismo Watch](SeismoWatch.py)
+[دیدن کد پایتون](SeismoWatch.py)
 
-## Finding Information:
-The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
+## یافتن اطلاعات:
+این کد اطلاعات را از وب سایت سازمان زمین شناسی ایالات متحده (USGS) به طور خاص از آدرس اینترنتی زیر بازیابی می کند:
 
-<a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson" target="_blank">View Earthquake Data</a>
+ برای دیدن سایت مرجع کلک کنید <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson" target="_blank">View Earthquake Data</a>
 
-This URL provides a GeoJSON feed that contains data about recent earthquakes. The specific information passed to the code includes:
-1. Metadata: This includes the title of the data set and the count of recorded earthquake events.
-2. Features: This section provides details about each earthquake, including:
-   Place: The geographical location of the earthquake.<br>
-  Magnitude: The strength of the earthquake, which is used to filter significant events (magnitude ≥ 4.0).<br>
-  Felt Reports: The number of reports from people who felt the earthquake, if available.
+این URL یک فید GeoJSON ارائه می دهد که حاوی داده های مربوط به زلزله های اخیر است. اطلاعات خاص ارسال شده به کد شامل:
+1. فراداده: این شامل عنوان مجموعه داده و تعداد رویدادهای زلزله ثبت شده است.
+2. ویژگی ها: این بخش جزئیات مربوط به هر زمین لرزه از جمله:
+   مکان: موقعیت جغرافیایی زلزله.<br>
+  بزرگی: قدرت زمین لرزه که برای فیلتر کردن رویدادهای مهم استفاده می شود (قدرت ≥ 4.0).<br>
+  گزارش‌های احساسی: تعداد گزارش‌های افرادی که زلزله را احساس کرده‌اند، در صورت وجود.
 
-The code processes this data to display the title, total number of recorded events, locations of all earthquakes, locations of significant earthquakes (magnitude ≥ 4.0), and details of earthquakes that were felt by people, along with the count of such reports.
+کد این داده‌ها را پردازش می‌کند تا عنوان، تعداد کل رویدادهای ثبت‌شده، مکان همه زمین‌لرزه‌ها، مکان‌های زمین‌لرزه‌های مهم (قدرت ≥ 4.0)، و جزئیات زمین‌لرزه‌هایی که توسط مردم احساس شده‌اند، همراه با شمارش چنین گزارش‌هایی را نمایش دهد.
 
 
+## کتابخانه ها:
+کد از کتابخانه های زیر استفاده می کند:
+1. کتابخانه json :
+  این کتابخانه بخشی از کتابخانه استاندارد پایتون است و برای تجزیه و تحلیل داده های JSON (جاوا اسکریپت Object Notation) استفاده می شود. نیازی به نصب این کتابخانه نیست، زیرا با پایتون از قبل نصب شده است.
+2. کتابخانه urllib.request:
+  این ماژول کتابخانه استاندارد دیگری است که برای مدیریت باز کردن و واکشی URL ها استفاده می شود. این کتابخانه نیز به صورت پیش فرض در پایتون گنجانده شده است، بنابراین نیازی به نصب نیست.
 
-## Libraries:
-The code uses the following libraries:
-1. json:
-  This library is part of Python's standard library and is used to parse JSON (JavaScript Object Notation) data. No need to install this library, as it comes pre-installed with Python.
-2. urllib.request:
-  This is another standard library module that is used to handle opening and fetching URLs. This library is also included in Python by default, so no installation is needed.
-
-## JSON: What is it and How Does it Work?
-JSON (JavaScript Object Notation) is a lightweight data-interchange format that is easy for humans to read and write and easy for machines to parse and generate. It is commonly used for transmitting data in web applications between a server and a client.
-In Python, the json library is used to decode JSON data into a Python dictionary, allowing the program to easily access and manipulate the data.
+## چیست و چگونه کار می کند(json)؟
+JSON (JavaScript Object Notation) یک فرمت تبادل داده سبک وزن است که خواندن و نوشتن آن برای انسان آسان است و تجزیه و تولید آن برای ماشین ها آسان است. معمولاً برای انتقال داده ها در برنامه های وب بین سرور و مشتری استفاده می شود.
+در پایتون، از کتابخانه json برای رمزگشایی داده‌های JSON در فرهنگ لغت پایتون استفاده می‌شود و به برنامه اجازه می‌دهد به راحتی به داده‌ها دسترسی پیدا کند و آن‌ها را دستکاری کند.
 <hr>
 
-## How the Code Works (Step-by-Step Breakdown):
+## چگونه کد کار می کند (تجزیه گام به گام):
 
-1. Import Libraries:
+1. واردات کتابخانه ها:
 ```python
 import json
 import urllib.request
 ```
-The json library is used for working with JSON data.
-The urllib.request library is used for making HTTP requests to fetch data from a given URL.
+کتابخانه json برای کار با داده های JSON استفاده می شود.
+کتابخانه urllib.request برای ایجاد درخواست های HTTP برای واکشی داده ها از یک URL خاص استفاده می شود.
 
-2. Defining the printResults function:
+2. تعریف تابع printResults:
 ```python
 def printResults(data):
 ```
-This function will process the JSON data received from the USGS server and print the desired information.
+این تابع داده های JSON دریافتی از سرور USGS را پردازش کرده و اطلاعات مورد نظر را چاپ می کند.
 
 3. Parse the JSON Data:
 ```python
 theJSON = json.loads(data)
 ```
-The JSON data (in string format) is loaded into a Python dictionary using json.loads(). This allows easy access to the data.
+داده های JSON (در قالب رشته) با استفاده از json.loads() در فرهنگ لغت پایتون بارگذاری می شود. این امکان دسترسی آسان به داده ها را فراهم می کند.
 
-4. Extracting the Title from Metadata:
+4. استخراج عنوان از متادیتا:
 ```python
 if 'title' in theJSON['metadata']:
     print(theJSON['metadata']['title'])
 ```
-This checks if the 'title' exists in the metadata and prints it. The title typically gives information about the data source.
+با این کار بررسی می‌شود که «عنوان» در فراداده وجود داشته باشد و آن را چاپ می‌کند. عنوان معمولاً اطلاعاتی در مورد منبع داده می دهد.
 
-5. Counting and Printing Total Events:
+5. شمارش و چاپ کل رویدادها:
 ```python
 count = theJSON['metadata']['count']
 print(count, 'events recorded')
 ```
-The script fetches the total count of recorded earthquake events and prints it.
+فیلمنامه تعداد کل رویدادهای زلزله ثبت شده را واکشی می کند و آن را چاپ می کند.
 
-6. Printing All Event Locations:
+6. چاپ همه مکان های رویداد:
 ```python
 for i in theJSON['features']:
     print(i['properties']['place'])
 ```
-This loop iterates over all earthquake events (features) and prints the location (place) where each earthquake occurred.
+این حلقه روی تمام رویدادهای زلزله (ویژگی ها) تکرار می شود و مکان (مکان) جایی که هر زلزله رخ داده است را چاپ می کند.
 
-7. Filtering and Printing Significant Events (Magnitude >= 4.0):
+7. فیلتر کردن و چاپ رویدادهای مهم (مقدار >= 4.0):
 ```python
 for i in theJSON['features']:
     if i['properties']['mag'] >= 4.0:
         print(i['properties']['place'])
 ```
-This loop prints locations of earthquakes with a magnitude greater than or equal to 4.0. These events are more significant because of their higher magnitude.
+این حلقه مکان های زلزله هایی با بزرگی بیشتر یا مساوی 4.0 را چاپ می کند. این وقایع به دلیل بزرگی بالاتر از اهمیت بیشتری برخوردار هستند.
 
-8. Printing Earthquakes that Were Felt by People:
+8. چاپ زمین لرزه هایی که توسط مردم احساس شد:
 ```python
 print('\n Events that were felt:')
 for i in theJSON['features']:
@@ -102,9 +101,9 @@ for i in theJSON['features']:
         if feltReports > 0:
             print(i['properties']['place'], feltReports, 'times')
 ```
-The code filters the events where people reported feeling the earthquake. If an event was felt, it prints the location and the number of times it was reported.
+این کد رویدادهایی را که مردم گزارش کرده اند زلزله را احساس کرده اند فیلتر می کند. اگر رویدادی احساس شد، مکان و تعداد دفعات گزارش آن را چاپ می‌کند.
 
-9. Main Function:
+9. عملکرد اصلی:
 ```python
 def main():
     urlData = "http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson"
@@ -117,17 +116,17 @@ def main():
     else:
         print('Received an error from the server, cannot print results', webUrl.getcode())
 ```
-The main() function makes an HTTP request to the USGS API to retrieve the latest earthquake data (summary of events with a magnitude of 2.5+ for the past day).
-If the request is successful (200 status code), the response data is passed to the printResults() function for processing. If not, it prints an error message.
+تابع main() یک درخواست HTTP به USGS API برای بازیابی آخرین داده های زلزله (خلاصه رویدادها با بزرگی 2.5+ برای روز گذشته) می دهد.
+اگر درخواست موفقیت آمیز باشد (200 کد وضعیت)، داده های پاسخ برای پردازش به تابع printResults() ارسال می شود. اگر نه، پیغام خطا چاپ می کند.
 
-10. Running the Script:
+10. اجرای اسکریپt:
 ```python
 if __name__ == "__main__":
     main()
 ```
-This block ensures that the main() function is called when the script is executed.
+این بلوک تضمین می کند که تابع main() هنگام اجرای اسکریپت فراخوانی می شود.
 
-## Python Code
+## کد پایتون
 ```python
 
 import json
@@ -173,17 +172,18 @@ if __name__ == "__main__":
 
 ```
 
-## Conclusion:
-This script retrieves real-time earthquake data from the USGS and processes it to display key information about recent earthquakes, such as:
-Title of the dataset
-Total number of events
-Locations of all recorded events
-Locations of events with a magnitude of 4.0 or greater
-Locations and counts of events that were felt by people.
+## نتیجه گیری:
+این اسکریپت داده‌های زلزله در زمان واقعی را از USGS بازیابی می‌کند و آن‌ها را برای نمایش اطلاعات کلیدی درباره زلزله‌های اخیر پردازش می‌کند، مانند:
+- عنوان مجموعه داده
+- تعداد کل رویدادها
+- مکان تمام رویدادهای ثبت شده
+- مکان رویدادهایی با قدر 4.0 یا بیشتر
+- مکان ها و تعداد رویدادهایی که توسط مردم احساس می شد.
 
 <hr>
 
-## License
+## مجوز
+
 
 MIT
 
