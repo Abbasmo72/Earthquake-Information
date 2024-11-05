@@ -2,7 +2,9 @@
 
 ## ردیاب زلزله
 
-<img alt="Gif" src="https://acropolis-wp-content-uploads.s3.us-west-1.amazonaws.com/2019/02/Hero-Earthquake-Proof-Buildings.gif" height="250px" width="600px">
+<a href="https://blog.google/products/android/earthquake-detection-and-alerts/">
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWkTMC-Jv_knTVbe2tngJXHJ1zhAGzgrxUA&s" style="width:auto; height:auto;">
+</a>
 </div>
 <hr>
 
