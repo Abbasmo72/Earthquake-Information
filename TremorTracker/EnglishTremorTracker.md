@@ -2,9 +2,8 @@
 
 ## TremorTracker
 
-<a href="https://blog.google/products/android/earthquake-detection-and-alerts/">
-    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRlWkTMC-Jv_knTVbe2tngJXHJ1zhAGzgrxUA&s" style="width:auto; height:auto;">
-</a>
+<img src="https://i.ytimg.com/vi/zFin2wZ56tM/maxresdefault.jpg" alt="Image Description" width="50%">
+
 </div>
 <hr>
 
