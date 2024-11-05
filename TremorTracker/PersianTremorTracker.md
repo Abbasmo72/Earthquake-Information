@@ -6,7 +6,7 @@
 </div>
 <hr>
 
-[Click to see the descriptions in Persian language](EnglishTremorTracker.md)
+[Click to see the descriptions in English language](EnglishTremorTracker.md)
 <hr>
 
 
