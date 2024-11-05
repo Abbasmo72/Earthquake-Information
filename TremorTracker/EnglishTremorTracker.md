@@ -12,7 +12,7 @@
 ## Overview of the Code:
 This script is designed to fetch earthquake data from the USGS (United States Geological Survey) using a GeoJSON feed, parse the JSON response, and print relevant information such as the number of events and locations where earthquakes have been felt.
 
-[TremorTracker](TremorTracker/TremorTracker.py)
+[TremorTracker](TremorTracker.py)
 
 ## Finding Information:
 The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
