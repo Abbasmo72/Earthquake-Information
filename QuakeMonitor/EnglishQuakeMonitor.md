@@ -10,7 +10,7 @@
 [Click to see the descriptions in Persian language](PersianQuakeMonitor.md)
 <hr>
 
-## Overview of the Code:
+## Overview of the Code
 The code is designed to track global earthquake activity above a magnitude of 4.0 over the past 24 hours, leveraging data from the US Geological Survey (USGS) Earthquake API. It includes three main components:
 
 1. Data Retrieval: The fetch_earthquake_data() function builds a URL to fetch earthquake data in JSON format from the USGS API, filtering based on a minimum magnitude of 4.0 and a 24-hour timeframe. This ensures the data is recent and only includes significant seismic events.
@@ -19,7 +19,7 @@ The code is designed to track global earthquake activity above a magnitude of 4.
 
 This program provides a concise and structured view of recent global earthquake activity, grouped by country and city, enabling users to track significant seismic events in a reader-friendly format.
 
-## How the Code Works (Step-by-Step Breakdown):
+## How the Code Works (Step-by-Step Breakdown)
 1. Importing Libraries:
    - requests: Used to send HTTP requests to the API.
    - datetime and timedelta: Used for working with dates and times, and calculating the start and end times.
