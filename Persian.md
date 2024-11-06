@@ -19,7 +19,8 @@
 
 ### 2. مانیتور زلزله:
 این برنامه داده‌های زلزله‌های بالای ۴ ریشتر در ۲۴ ساعت گذشته را از سراسر دنیا با استفاده از API سازمان زمین‌شناسی آمریکا دریافت می‌کند. تابع fetch_earthquake_data() یک URL برای درخواست داده‌ها در قالب JSON می‌سازد که شامل فیلترهایی برای محدوده زمان و شدت زلزله است. تابع format_time() زمان زلزله را از فرمت UTC به یک تاریخ و زمان قابل خواندن تبدیل می‌کند. هر ورودی زلزله پردازش شده و اطلاعاتی مانند مکان، شهر، کشور، مختصات، شدت و زمان دقیق آن استخراج می‌شود. داده‌ها در یک دیکشنری ذخیره می‌شوند و زلزله‌ها براساس کشور و سپس شهر گروه‌بندی می‌شوند. تابع display_earthquake_data() کشورها را به ترتیب حروف الفبا مرتب کرده و اطلاعات هر کشور را به صورت خوانا چاپ می‌کند. برای هر کشور، شهرهای تحت تأثیر، مختصات جغرافیایی، شدت و زمان هر زلزله نمایش داده می‌شود. این برنامه به کاربران امکان می‌دهد فعالیت‌های لرزه‌ای اخیر را در سراسر دنیا مشاهده کنند، به صورت مرتب شده براساس کشور و شهر.
-برای مشاهده فایل <b>[English README.md](QuakeMonitor/EnglishQuakeMonitor.md)</b> و <b>[Persian README.md](QuakeMonitor/PersianQuakeMonitor.md)</b> و کد کامل <b>[Python Code](QuakeMonitor/QuakeMonitorEnglish.py)</b>.
+
+برای مشاهده فایل <b>[English README.md](QuakeMonitor/EnglishQuakeMonitor.md)</b> و <b>[Persian README.md](QuakeMonitor/PersianQuakeMonitor.md)</b> و کد کامل <b>[Python Code](QuakeMonitor/QuakeMonitorPersian.py)</b>.
 <hr>
 
 
