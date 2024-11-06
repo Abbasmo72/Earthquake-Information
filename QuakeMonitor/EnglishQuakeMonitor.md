@@ -117,7 +117,7 @@ display_earthquake_data()
 ### Summary:
 This code fetches earthquake data from the USGS API for earthquakes with a magnitude of 4 or higher that occurred in the last 24 hours. It categorizes the data by country and city and displays details such as location, magnitude, coordinates, and time for each earthquake, sorted alphabetically by country.
 
-### Python Code:
+# Python Code:
 ```python
 import requests
 from datetime import datetime, timedelta
