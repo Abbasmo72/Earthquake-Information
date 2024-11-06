@@ -20,7 +20,7 @@ To view the file <b>[English README.md](TremorTracker/EnglishTremorTracker.md)</
 ### 2. Quake Monitor:
 This program retrieves earthquake data above a magnitude of 4.0 from the past 24 hours worldwide using the USGS Earthquake API. The fetch_earthquake_data() function constructs a URL to request data in JSON format, filtering by time range and earthquake magnitude. The format_time() function converts the earthquake time from UTC to a readable date and time. Each earthquake entry is processed to extract details such as location, city, country, coordinates, magnitude, and exact time. The data is stored in a dictionary, grouping earthquakes by country and then by city. The display_earthquake_data() function sorts countries alphabetically and prints each country’s information in a readable format. For each country, affected cities, geographic coordinates, magnitude, and time of each earthquake are displayed. This allows users to view recent seismic activity worldwide, organized by country and city.
 
-To view the file <b>[English README.md](QuakeMonitor/EnglishQuakeMonitor.md)</b> and <b>[Persian README.md](QuakeMonitor/PersianQuakeMonitor.md)</b> In the case of the full code of the game <b>[Python Code](QuakeMonitor/EnglishQuakeMonitor.py)</b>.
+To view the file <b>[English README.md](QuakeMonitor/EnglishQuakeMonitor.md)</b> and <b>[Persian README.md](QuakeMonitor/PersianQuakeMonitor.md)</b> In the case of the full code of the game <b>[Python Code](QuakeMonitorEnglish.py)</b>.
 <hr>
 
 ## License
