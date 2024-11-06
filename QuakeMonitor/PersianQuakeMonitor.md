@@ -111,10 +111,10 @@ def display_earthquake_data():
 display_earthquake_data()
 ```
 
-### نتیجه:
+### نتیجه
 این کد اطلاعات زلزله‌های با شدت بالای ۴ ریشتر در ۲۴ ساعت گذشته را به تفکیک کشورها نمایش می‌دهد، شامل جزئیات مکان، شدت، زمان و مختصات جغرافیایی هر زلزله.
 
-## کد پایتون:
+## کد پایتون
 ```python
 import requests
 from datetime import datetime, timedelta
