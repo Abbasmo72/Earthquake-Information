@@ -17,7 +17,7 @@ The code is designed to track global earthquake activity above a magnitude of 4.
 2. Data Processing: After receiving the JSON data, each earthquake entry is processed to extract essential details such as location, country, city (if available), geographic coordinates, magnitude, and the exact time of occurrence. The data is stored in a dictionary that groups earthquakes by country, making it easier to organize and display by location.
 3. Displaying Data: The display_earthquake_data() function sorts the countries alphabetically and prints the earthquake information for each country. For each entry, it shows the affected cities, coordinates, magnitude, and exact time, creating a clear and organized summary of seismic events worldwide.
 
-This program provides a concise and structured view of recent global earthquake activity, grouped by country and city, enabling users to track significant seismic events in a reader-friendly format
+This program provides a concise and structured view of recent global earthquake activity, grouped by country and city, enabling users to track significant seismic events in a reader-friendly format.
 
 ## How the Code Works (Step-by-Step Breakdown):
 1. Importing Libraries:
