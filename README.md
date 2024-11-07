@@ -23,6 +23,17 @@ This program retrieves earthquake data above a magnitude of 4.0 from the past 24
 To view the file <b>[English README.md](QuakeMonitor/EnglishQuakeMonitor.md)</b> and <b>[Persian README.md](QuakeMonitor/PersianQuakeMonitor.md)</b> And the complete code <b>[Python Code](QuakeMonitor/QuakeMonitorEnglish.py)</b>.
 <hr>
 
+### 3. Iran Seismo Finder: 
+This code is designed to retrieve and display earthquake information from the past month in Iran using the United States Geological Survey (USGS) API. It first calculates the date range by determining today’s date and the date 30 days prior, setting up a one-month time frame. It also specifies the geographical coordinates of Iran to filter data for this specific region.
+The code then sends a request to the API, which returns earthquake data in JSON format. If the request is successful, the program proceeds to process the data. For each earthquake, details such as magnitude, location, exact time (date and hour), and geographical coordinates (latitude and longitude) are extracted.
+The program also attempts to parse the earthquake’s location to identify the specific province or city within Iran where the earthquake occurred. If the location string includes a precise city or province, it displays this along with other collected information. If a specific location isn’t available, the code displays a more general location name. In case of any issues in retrieving the data, an error message is printed to inform the user of the unsuccessful request.
+
+To view the file <b>[English README.md](IranSeismoFinder/EnglishIranSeismoFinder.md)</b> and <b>[Persian README.md](IranSeismoFinder/PersianIranSeismoFinder.md)</b> And the complete code <b>[Python Code](IranSeismoFinder/IranSeismoFinderEnglish.py)</b>.
+
+
+
+<hr>
+
 ## License
 
 MIT
