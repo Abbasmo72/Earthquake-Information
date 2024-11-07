@@ -28,7 +28,7 @@
 کد با ارسال درخواست به API، اطلاعات زلزله‌ها را به‌صورت JSON دریافت می‌کند. اگر درخواست موفقیت‌آمیز باشد، برنامه وارد مرحله پردازش داده‌ها می‌شود. در این مرحله، برای هر زلزله ویژگی‌هایی شامل بزرگی زلزله، محل وقوع، زمان دقیق (تاریخ و ساعت) و مختصات جغرافیایی (عرض و طول) استخراج می‌گردد.
 سپس برنامه با تجزیه مکان زلزله تلاش می‌کند تا نام استان یا شهری را که زلزله در آن رخ داده است استخراج کند. اگر مکان دارای نام دقیق شهر یا استان باشد، آن را به همراه اطلاعات کامل دیگری که جمع‌آوری شده در خروجی نمایش می‌دهد. اگر مکان دقیق مشخص نباشد، کد مکان کلی‌تر را نمایش می‌دهد. همچنین در صورت بروز خطا در هنگام دریافت داده‌ها، پیام خطا به کاربر نشان داده می‌شود تا از وضعیت ناموفق درخواست مطلع شود.
 
-برای مشاهده فایل <b>[English README.md](IranSeismoFinder/EnglishIranSeismoFinder.md)</b> و <b>[Persian README.md](IranSeismoFinder/PersianIranSeismoFinder.md)</b> و کد کامل <b>[Python Code](QIranSeismoFinder/IranSeismoFinderPersian.py)</b>.
+برای مشاهده فایل <b>[English README.md](IranSeismoFinder/EnglishIranSeismoFinder.md)</b> و <b>[Persian README.md](IranSeismoFinder/PersianIranSeismoFinder.md)</b> و کد کامل <b>[Python Code](IranSeismoFinder/IranSeismoFinderPersian.py)</b>.
 <hr>
 
 
