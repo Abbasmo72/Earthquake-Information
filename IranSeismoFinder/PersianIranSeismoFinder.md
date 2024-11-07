@@ -28,5 +28,146 @@
    - در صورتی که درخواست API موفقیت‌آمیز نباشد یا مشکلی در دریافت داده‌ها پیش آید، کد یک پیام خطا را نمایش می‌دهد تا کاربر از وقوع مشکل مطلع شود.
 8. خروجی کاربر پسند:
    - اطلاعات به‌صورت واضح و خوانا برای کاربر نمایش داده می‌شود تا جزئیات مربوط به زلزله‌ها شامل مکان، بزرگی، زمان و مختصات جغرافیایی به‌خوبی قابل فهم باشند.
-  
-  
+
+## چگونه کد کار می کند (تجزیه گام به گام):
+1. وارد کردن کتابخانه مورد نیاز:
+   - کتابخانه requests برای ارسال درخواست‌های HTTP به API زمین‌شناسی ایالات متحده (USGS) و دریافت پاسخ استفاده می‌شود. این کتابخانه به‌طور ساده برای تعامل با APIها و مدیریت پاسخ‌ها طراحی شده است.
+
+ ```python
+import requests
+```
+2. تعریف تابع:
+   - این تابع get_iran_earthquakes است که تمام منطق برای دریافت، پردازش و نمایش داده‌های زلزله را در خود جای داده است. این تابع به‌صورت مجزا تعریف می‌شود تا در هر زمان که نیاز به دریافت داده‌های زلزله داشتیم، قابل فراخوانی باشد.
+```python
+def get_iran_earthquakes():
+```
+3. محاسبه بازه زمانی:
+   - این بخش تاریخ‌های بازه زمانی یک ماه گذشته را محاسبه می‌کند. تاریخ شروع (start_date) با کم کردن ۳۰ روز از تاریخ امروز محاسبه می‌شود. تاریخ پایان (end_date) نیز همان تاریخ امروز است. این تاریخ‌ها به فرمت YYYY-MM-DD تبدیل می‌شوند تا با فرمت درخواست API مطابقت داشته باشند.
+```python
+start_date = (datetime.datetime.now() - datetime.timedelta(days=30)).strftime('%Y-%m-%d')
+end_date = datetime.datetime.now().strftime('%Y-%m-%d')
+```
+4. تنظیم پارامترهای جغرافیایی ایران:
+- در این بخش، پارامترهای جغرافیایی ایران (عرض و طول جغرافیایی) تنظیم می‌شود. این پارامترها شامل:
+   - پارامتر format: فرمت پاسخ به‌صورت GeoJSON است.
+   - پارامتر starttime و endtime: تاریخ شروع و پایان بازه زمانی یک ماه اخیر.
+   - پاراکتر minlatitude، maxlatitude، minlongitude و maxlongitude: مختصات جغرافیایی که تنها زلزله‌های درون مرزهای ایران را بازیابی می‌کنند.
+```python
+params = {
+    'format': 'geojson',
+    'starttime': start_date,
+    'endtime': end_date,
+    'minlatitude': 24.396308,
+    'maxlatitude': 39.148174,
+    'minlongitude': 44.396216,
+    'maxlongitude': 63.246158
+}
+```
+5. ارسال درخواست به API:
+   - درخواست GET به API زمین‌شناسی ایالات متحده (USGS) ارسال می‌شود. این درخواست به همراه پارامترهای تاریخ و مختصات جغرافیایی ایران به API ارسال می‌شود و پاسخ آن در متغیر response ذخیره می‌شود.
+```python
+response = requests.get(url, params=params)
+```
+6. بررسی وضعیت پاسخ:
+   - این خط بررسی می‌کند که آیا درخواست با موفقیت انجام شده است یا خیر. اگر وضعیت کد پاسخ 200 باشد، به این معنی است که درخواست موفق بوده و داده‌ها دریافت شده‌اند.
+```python
+if response.status_code == 200:
+```
+7. پردازش داده‌های JSON:
+   - اگر درخواست موفقیت‌آمیز باشد، محتوای پاسخ به‌صورت JSON پردازش می‌شود با استفاده از متد response.json() و داده‌ها در قالب یک دیکشنری قرار می‌گیرند. لیست زلزله‌ها از کلید features استخراج می‌شود که شامل اطلاعات مربوط به هر زلزله است.
+```python
+data = response.json()
+earthquakes = data['features']
+```
+8. استخراج اطلاعات زلزله:
+- در این بخش، کد از یک حلقه برای پیمایش در هر زلزله در لیست earthquakes استفاده می‌کند. برای هر زلزله، اطلاعات زیر استخراج می‌شود:
+   - اطلاعات magnitude: بزرگی زلزله از بخش properties.
+   - اطلاعات location: مکان وقوع زلزله از بخش properties.
+```python
+for quake in earthquakes:
+    magnitude = quake['properties']['mag']
+    location = quake['properties']['place']
+```
+9. تجزیه مکان:
+    - در این بخش، کد تلاش می‌کند تا از رشته مکان، نام استان یا شهر را استخراج کند. مکان به بخش‌های مختلف تقسیم می‌شود و در صورت وجود چندین بخش، دومین بخش از انتها (که معمولاً نام استان یا شهر را شامل می‌شود) انتخاب می‌شود. سپس این نام بدون فضای اضافی چاپ می‌شود. اگر مکان مشخصی استخراج نشود، مکان کامل نمایش داده می‌شود.
+```python
+parts = location.split(',')
+if len(parts) > 1:
+    city_province = parts[-2].strip()
+    print(f'Magnitude: {magnitude}, Location: {city_province}, Full Location: {location}')
+else:
+    print(f'Magnitude: {magnitude}, Location: {location}')
+```
+10. مدیریت خطا:
+    - اگر درخواست به API با موفقیت انجام نشود (یعنی کد وضعیت غیر از 200 باشد)، این بخش یک پیام خطا چاپ می‌کند که نشان می‌دهد مشکلی در دریافت داده‌ها وجود داشته است.
+```python
+else:
+    print('Error fetching data')
+```
+11. فراخوانی تابع:
+    - این خط تابع get_iran_earthquakes را فراخوانی می‌کند که باعث اجرای تمام منطق تعریف‌شده در داخل تابع می‌شود و داده‌های زلزله‌ها را برای یک ماه گذشته در ایران دریافت و نمایش می‌دهد.
+```python
+get_iran_earthquakes()
+```
+
+هر بخش از این کد مسئول انجام یک کار خاص است؛ از محاسبه تاریخ شروع و پایان بازه زمانی گرفته تا استخراج و نمایش داده‌ها. کد داده‌های زلزله را از API دریافت کرده، پردازش می‌کند و به‌صورت خوانا برای کاربر نمایش می‌دهد.
+
+## کد پایتون:
+```python
+import requests
+from datetime import datetime, timedelta
+
+def get_iran_earthquakes():
+    # آدرس API مربوط به زلزله‌ها
+    url = 'https://earthquake.usgs.gov/fdsnws/event/1/query'
+    
+    # محاسبه تاریخ پایان (امروز) و تاریخ شروع (یک ماه قبل)
+    end_date = datetime.utcnow()  # تاریخ امروز به‌صورت UTC
+    start_date = end_date - timedelta(days=30)  # تاریخ 30 روز قبل
+    
+    # تنظیم پارامترهای درخواست به API
+    params = {
+        'format': 'geojson',
+        'starttime': start_date.strftime('%Y-%m-%d'),  # تاریخ شروع (30 روز قبل)
+        'endtime': end_date.strftime('%Y-%m-%d'),      # تاریخ پایان (امروز)
+        'minlatitude': 24.396308,     # حداقل عرض جغرافیایی برای ایران
+        'maxlatitude': 39.148174,     # حداکثر عرض جغرافیایی برای ایران
+        'minlongitude': 44.396216,    # حداقل طول جغرافیایی برای ایران
+        'maxlongitude': 63.246158     # حداکثر طول جغرافیایی برای ایران
+    }
+    
+    # ارسال درخواست به API
+    response = requests.get(url, params=params)
+    
+    # بررسی موفقیت درخواست
+    if response.status_code == 200:
+        # استخراج داده‌ها به‌صورت JSON
+        data = response.json()
+        earthquakes = data['features']
+        
+        # پردازش هر زلزله در لیست زلزله‌ها
+        for quake in earthquakes:
+            magnitude = quake['properties']['mag']  # بزرگی زلزله
+            location = quake['properties']['place']  # مکان زلزله
+            # تبدیل زمان وقوع زلزله از میلی‌ثانیه به فرمت خوانا
+            quake_time = datetime.utcfromtimestamp(quake['properties']['time'] / 1000).strftime('%Y-%m-%d %H:%M:%S')
+            # دریافت مختصات جغرافیایی (طول و عرض)
+            coordinates = quake['geometry']['coordinates']
+            longitude = coordinates[0]  # طول جغرافیایی
+            latitude = coordinates[1]   # عرض جغرافیایی
+            
+            # تلاش برای استخراج نام استان یا شهر از رشته مکان
+            if 'Iran' in location:
+                # منطق ساده برای استخراج شهر/استان
+                parts = location.split(',')
+                if len(parts) > 1:
+                    city_province = parts[-2].strip()  # گرفتن قسمت قبل از "Iran"
+                    print(f'بزرگی: {magnitude}, مکان: {city_province}, مکان کامل: {location}, تاریخ: {quake_time}, عرض جغرافیایی: {latitude}, طول جغرافیایی: {longitude}')
+                else:
+                    print(f'بزرگی: {magnitude}, مکان: {location}, تاریخ: {quake_time}, عرض جغرافیایی: {latitude}, طول جغرافیایی: {longitude}')
+    else:
+        print('خطا در دریافت داده‌ها')
+
+# فراخوانی تابع
+get_iran_earthquakes()
+```
