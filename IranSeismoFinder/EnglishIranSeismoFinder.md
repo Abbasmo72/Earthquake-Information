@@ -67,7 +67,7 @@ params = {
 response = requests.get(url, params=params)
 ```
 6.  Checking the Response Status:
-   - This checks if the request was successful by evaluating the status code. A status code of 200 indicates that the request was successful and data is available.
+    - This checks if the request was successful by evaluating the status code. A status code of 200 indicates that the request was successful and data is available.
 ```python
 if response.status_code == 200:
 ```
