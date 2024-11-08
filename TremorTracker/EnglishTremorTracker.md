@@ -10,12 +10,12 @@
 [Click to see the descriptions in Persian language](PersianTremorTracker.md)
 <hr>
 
-## Overview of the Code:
+## Overview of the Code
 This script is designed to fetch earthquake data from the USGS (United States Geological Survey) using a GeoJSON feed, parse the JSON response, and print relevant information such as the number of events and locations where earthquakes have been felt.
 
 [TremorTracker](TremorTracker.py)
 
-## Finding Information:
+## Finding Information
 The code retrieves information from the United States Geological Survey (USGS) website, specifically from the following URL:
 
 <a href="http://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/2.5_day.geojson" target="_blank">View Earthquake Data</a>
@@ -30,7 +30,7 @@ This URL provides a GeoJSON feed that contains data about recent earthquakes. Th
 The code processes this data to display the title, total number of recorded events, locations of all earthquakes, locations of significant earthquakes (magnitude ≥ 4.0), and details of earthquakes that were felt by people, along with the count of such reports.
 
 
-## Libraries:
+## Libraries
 The code uses the following libraries:
 1. json:
   This library is part of Python's standard library and is used to parse JSON (JavaScript Object Notation) data. No need to install this library, as it comes pre-installed with Python.
@@ -42,7 +42,7 @@ JSON (JavaScript Object Notation) is a lightweight data-interchange format that 
 In Python, the json library is used to decode JSON data into a Python dictionary, allowing the program to easily access and manipulate the data.
 <hr>
 
-## How the Code Works (Step-by-Step Breakdown):
+## How the Code Works (Step-by-Step Breakdown)
 
 1. Import Libraries:
 ```python
