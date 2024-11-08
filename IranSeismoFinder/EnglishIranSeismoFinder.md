@@ -28,7 +28,7 @@
 8. User-Friendly Output:
    - The code ensures that the information is presented clearly, providing users with earthquake details including both general and specific location data, as well as time and magnitude.
   
-## How the Code Works (Step-by-Step Breakdown):
+## How the Code Works (Step-by-Step Breakdown)
 1. Importing the Required Library:
    - The requests library is imported to send HTTP requests to the USGS Earthquake API and handle the response. This library makes it easier to interact with APIs by providing simple methods for making requests and handling responses.
 ```python
@@ -110,7 +110,7 @@ get_iran_earthquakes()
 
 Each section of the code is responsible for a specific task, from calculating the date range to displaying the earthquake information. The code retrieves earthquake data from an API, processes it, and presents it in a readable format for the user.
 
-## Python Code:
+## Python Code
 ```python
 import requests
 from datetime import datetime, timedelta
