@@ -34,7 +34,7 @@ To view the file <b>[English README.md](IranSeismoFinder/EnglishIranSeismoFinder
 ### 4. Red Dot Quakes:
 This Python script visualizes recent global earthquake data on an interactive map. It uses the USGS API to fetch data on earthquakes that occurred in the past 24 hours, displaying only those with a magnitude above 2.5 to ensure relevance. The data includes each earthquake’s location, magnitude, and geographic coordinates. Using the folium library, the script creates an interactive world map centered at (0, 0) with a wide view. Each earthquake is marked as a red dot on the map, representing the epicenter location. Hovering over a marker shows a tooltip with details about the earthquake, including location name, magnitude, and latitude/longitude. The completed map is saved as an HTML file for easy viewing in a web browser, allowing users to explore recent global seismic activity interactively.
 
-To view the file <b>[English README.md](RedDotQuakes/EnglishRedDotQuakes.md)</b> and <b>[Persian README.md](RedDotQuakes/PersianRedDotQuakes.md)</b> And the complete code <b>[Python Code](RedDotQuakes/EnglishRedDotQuakes.py)</b>.
+To view the file <b>[English README.md](RedDotQuakes/EnglishRedDotQuakes.md)</b> and <b>[Persian README.md](RedDotQuakes/PersianRedDotQuakes.md)</b> And the complete code <b>[Python Code](RedDotQuakes/RedDotQuakesEnglish.py)</b>.
 <hr>
 
 
