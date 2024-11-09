@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_e3a21d1aa6de1373fdbfc16f0b3911a6 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_e3a21d1aa6de1373fdbfc16f0b3911a6" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_e3a21d1aa6de1373fdbfc16f0b3911a6 = L.map(
+                "map_e3a21d1aa6de1373fdbfc16f0b3911a6",
+                {
+                    center: [0.0, 0.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 2,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_5b7bb52be2887a2991570b20264920e2 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_5b7bb52be2887a2991570b20264920e2.addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            var circle_marker_97aa2dfb7bb86762cf098450e5b66dfe = L.circleMarker(
+                [-0.9121, 134.4599],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_97aa2dfb7bb86762cf098450e5b66dfe.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 44 km E of Manokwari, Indonesia<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (-0.9121, 134.4599)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b705fe198980fb8c5740459c077b54cf = L.circleMarker(
+                [28.683, -99.117],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_b705fe198980fb8c5740459c077b54cf.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 5 km ENE of Dilley, Texas<br><strong>Magnitude:</strong> 2.8<br><strong>Coordinates:</strong> (28.683, -99.117)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_348825ecd2664aa06d20bb5dba511ae7 = L.circleMarker(
+                [19.1669998168945, -155.702835083008],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_348825ecd2664aa06d20bb5dba511ae7.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 12 km NNE of Hawaiian Ocean View, Hawaii<br><strong>Magnitude:</strong> 2.56<br><strong>Coordinates:</strong> (19.1669998168945, -155.702835083008)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_54f4676796658539c7a2d4fe966b8cfe = L.circleMarker(
+                [32.308, 142.4566],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_54f4676796658539c7a2d4fe966b8cfe.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> Izu Islands, Japan region<br><strong>Magnitude:</strong> 5<br><strong>Coordinates:</strong> (32.308, 142.4566)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_73fa95ff5d580026f56be67d273d66b6 = L.circleMarker(
+                [32.3693, -104.7596],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_73fa95ff5d580026f56be67d273d66b6.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 41 km WNW of Whites City, New Mexico<br><strong>Magnitude:</strong> 2.5<br><strong>Coordinates:</strong> (32.3693, -104.7596)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d3c6a4940beacec6da668493ad70099d = L.circleMarker(
+                [19.5532, -156.6807],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_d3c6a4940beacec6da668493ad70099d.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 72 km W of Kailua-Kona, Hawaii<br><strong>Magnitude:</strong> 2.7<br><strong>Coordinates:</strong> (19.5532, -156.6807)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_087b3a01214fb8ebdc8284061be77980 = L.circleMarker(
+                [1.0803, 121.1367],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_087b3a01214fb8ebdc8284061be77980.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 222 km WNW of Gorontalo, Indonesia<br><strong>Magnitude:</strong> 4.9<br><strong>Coordinates:</strong> (1.0803, 121.1367)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_68ec81e8df4842195738279be23c3d00 = L.circleMarker(
+                [37.4189, 141.5411],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_68ec81e8df4842195738279be23c3d00.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 47 km ENE of Tomioka, Japan<br><strong>Magnitude:</strong> 4.4<br><strong>Coordinates:</strong> (37.4189, 141.5411)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8ecb729ec5bbc400e5e1b14ea9b79b24 = L.circleMarker(
+                [40.5071678161621, -120.635833740234],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_8ecb729ec5bbc400e5e1b14ea9b79b24.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 10 km NNE of Susanville, CA<br><strong>Magnitude:</strong> 2.71<br><strong>Coordinates:</strong> (40.5071678161621, -120.635833740234)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d744f3807e09174e018f0abf1723a6ac = L.circleMarker(
+                [10.1447, 125.9884],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_d744f3807e09174e018f0abf1723a6ac.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 14 km NNW of Santa Monica, Philippines<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (10.1447, 125.9884)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a1e60e538ea51bb5bc90e825e5828c9d = L.circleMarker(
+                [41.777, 14.7884],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_a1e60e538ea51bb5bc90e825e5828c9d.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 3 km S of Guardialfiera, Italy<br><strong>Magnitude:</strong> 4<br><strong>Coordinates:</strong> (41.777, 14.7884)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e1ac3774b96862e68074111aee153be = L.circleMarker(
+                [36.8568344116211, -121.603996276855],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_4e1ac3774b96862e68074111aee153be.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 5 km SSE of Aromas, CA<br><strong>Magnitude:</strong> 2.86<br><strong>Coordinates:</strong> (36.8568344116211, -121.603996276855)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_425cea5ec3a70dcc6469ca1e41066d6d = L.circleMarker(
+                [52.6128, -172.801],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_425cea5ec3a70dcc6469ca1e41066d6d.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 105 km ENE of Atka, Alaska<br><strong>Magnitude:</strong> 3.5<br><strong>Coordinates:</strong> (52.6128, -172.801)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4cb583b92f2c4de2c1742b276d22e61e = L.circleMarker(
+                [19.178, -67.0868333333333],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_4cb583b92f2c4de2c1742b276d22e61e.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 75 km N of Isabela, Puerto Rico<br><strong>Magnitude:</strong> 3.42<br><strong>Coordinates:</strong> (19.178, -67.0868333333333)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f4327f874f1189ee7cd5d088cf9f1317 = L.circleMarker(
+                [25.5116, 143.1014],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_f4327f874f1189ee7cd5d088cf9f1317.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> Volcano Islands, Japan region<br><strong>Magnitude:</strong> 4.9<br><strong>Coordinates:</strong> (25.5116, 143.1014)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f4ad2cd12723a6743ada7bee40886f65 = L.circleMarker(
+                [43.0689, -110.8494],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_f4ad2cd12723a6743ada7bee40886f65.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 13 km ENE of Etna, Wyoming<br><strong>Magnitude:</strong> 2.9<br><strong>Coordinates:</strong> (43.0689, -110.8494)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3be1a42cc771556713a56e51e068006b = L.circleMarker(
+                [60.0641, -153.0885],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_3be1a42cc771556713a56e51e068006b.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 64 km ENE of Pedro Bay, Alaska<br><strong>Magnitude:</strong> 3<br><strong>Coordinates:</strong> (60.0641, -153.0885)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2b07cdd46e6e2b853a097c9f2be3f5b9 = L.circleMarker(
+                [54.3105, -159.6851],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_2b07cdd46e6e2b853a097c9f2be3f5b9.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 125 km SSE of Sand Point, Alaska<br><strong>Magnitude:</strong> 3.8<br><strong>Coordinates:</strong> (54.3105, -159.6851)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4cccb1fe4b1c710800195a56d9e66bfb = L.circleMarker(
+                [54.3291, -159.7447],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_4cccb1fe4b1c710800195a56d9e66bfb.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 122 km SSE of Sand Point, Alaska<br><strong>Magnitude:</strong> 4.4<br><strong>Coordinates:</strong> (54.3291, -159.7447)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d99d6f6aeeeffec2902135d79ce3c6c5 = L.circleMarker(
+                [-5.569, 147.0197],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_d99d6f6aeeeffec2902135d79ce3c6c5.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 127 km N of Lae, Papua New Guinea<br><strong>Magnitude:</strong> 4.3<br><strong>Coordinates:</strong> (-5.569, 147.0197)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e5225f3ff6f788b5dbba48ae6c7be946 = L.circleMarker(
+                [58.7422, -152.6926],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_e5225f3ff6f788b5dbba48ae6c7be946.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 77 km N of Aleneva, Alaska<br><strong>Magnitude:</strong> 2.9<br><strong>Coordinates:</strong> (58.7422, -152.6926)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_56cae77d2ee6f655147b6300dcf8a02f = L.circleMarker(
+                [-7.5704, 127.7889],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_56cae77d2ee6f655147b6300dcf8a02f.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 136 km NE of Lospalos, Timor Leste<br><strong>Magnitude:</strong> 4.4<br><strong>Coordinates:</strong> (-7.5704, 127.7889)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_afda707b068e72ec73e6c1c7df962249 = L.circleMarker(
+                [60.0272, -153.2268],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_afda707b068e72ec73e6c1c7df962249.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 55 km ENE of Pedro Bay, Alaska<br><strong>Magnitude:</strong> 2.9<br><strong>Coordinates:</strong> (60.0272, -153.2268)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2914cad63052bcd6dbd567245346426f = L.circleMarker(
+                [65.382, -134.6205],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_2914cad63052bcd6dbd567245346426f.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 272 km ENE of Dawson City, Canada<br><strong>Magnitude:</strong> 4.9<br><strong>Coordinates:</strong> (65.382, -134.6205)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c96d6cab8c65dfafd76c5dfe87241cce = L.circleMarker(
+                [52.9089, 160.4905],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_c96d6cab8c65dfafd76c5dfe87241cce.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 126 km E of Petropavlovsk-Kamchatsky, Russia<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (52.9089, 160.4905)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8000b34292a68a59097d6f85f8bd2147 = L.circleMarker(
+                [42.9713, 44.158],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_8000b34292a68a59097d6f85f8bd2147.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 9 km SSW of Alagir, Russia<br><strong>Magnitude:</strong> 4.2<br><strong>Coordinates:</strong> (42.9713, 44.158)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_213307d250e2eab5e0be19876a7076a3 = L.circleMarker(
+                [17.8433333333333, -66.8626666666667],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_213307d250e2eab5e0be19876a7076a3.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 14 km SSE of Guánica, Puerto Rico<br><strong>Magnitude:</strong> 2.55<br><strong>Coordinates:</strong> (17.8433333333333, -66.8626666666667)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_54070fbb1efa05f4dc5eba471f700e97 = L.circleMarker(
+                [40.3063316345215, -123.656669616699],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_54070fbb1efa05f4dc5eba471f700e97.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 25 km NE of Redway, CA<br><strong>Magnitude:</strong> 2.63<br><strong>Coordinates:</strong> (40.3063316345215, -123.656669616699)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9867bb5f113cc59d261e854d7b6101fb = L.circleMarker(
+                [25.0682, 142.7603],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_9867bb5f113cc59d261e854d7b6101fb.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> Volcano Islands, Japan region<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (25.0682, 142.7603)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_296efd782bee023f80c942e4583afeb4 = L.circleMarker(
+                [13.7195, -91.9096],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_296efd782bee023f80c942e4583afeb4.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 63 km S of Champerico, Guatemala<br><strong>Magnitude:</strong> 4.2<br><strong>Coordinates:</strong> (13.7195, -91.9096)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_61bc167ca52389f2b20ed630ca30c8d3 = L.circleMarker(
+                [57.2083, -154.6452],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_61bc167ca52389f2b20ed630ca30c8d3.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 40 km NW of Akhiok, Alaska<br><strong>Magnitude:</strong> 2.5<br><strong>Coordinates:</strong> (57.2083, -154.6452)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_85950d460ab99f5c153ff45625ba029a = L.circleMarker(
+                [1.0959, 94.396],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_85950d460ab99f5c153ff45625ba029a.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 268 km SW of Sinabang, Indonesia<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (1.0959, 94.396)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd8a0dcb3f93824276317a7418867714 = L.circleMarker(
+                [-25.192, 179.9105],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_cd8a0dcb3f93824276317a7418867714.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> south of the Fiji Islands<br><strong>Magnitude:</strong> 4.5<br><strong>Coordinates:</strong> (-25.192, 179.9105)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e13dbaffa3c37ec0e84544b26786466f = L.circleMarker(
+                [56.8047, -155.6009],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_e13dbaffa3c37ec0e84544b26786466f.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 88 km W of Akhiok, Alaska<br><strong>Magnitude:</strong> 2.5<br><strong>Coordinates:</strong> (56.8047, -155.6009)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c90cf34670d8a1a6e678115b252041b5 = L.circleMarker(
+                [-25.1464, 178.6394],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_c90cf34670d8a1a6e678115b252041b5.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> south of the Fiji Islands<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (-25.1464, 178.6394)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_313367c16b664c31e0b04f577f6ccc4e = L.circleMarker(
+                [53.1928, 159.4657],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_313367c16b664c31e0b04f577f6ccc4e.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 57 km ENE of Petropavlovsk-Kamchatsky, Russia<br><strong>Magnitude:</strong> 4.4<br><strong>Coordinates:</strong> (53.1928, 159.4657)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_1e7f2e2027f6105d0b612a3fc567f6e5 = L.circleMarker(
+                [40.3056678771973, -123.657669067383],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_1e7f2e2027f6105d0b612a3fc567f6e5.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 25 km NE of Redway, CA<br><strong>Magnitude:</strong> 2.63<br><strong>Coordinates:</strong> (40.3056678771973, -123.657669067383)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c3332f2501943e5f016c9f56d164a410 = L.circleMarker(
+                [-28.7234, -71.5073],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_c3332f2501943e5f016c9f56d164a410.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 74 km WSW of Vallenar, Chile<br><strong>Magnitude:</strong> 4.6<br><strong>Coordinates:</strong> (-28.7234, -71.5073)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5a1e50c2a23d7f9c1f94fec8a3d51287 = L.circleMarker(
+                [59.2518, -152.834],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_5a1e50c2a23d7f9c1f94fec8a3d51287.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 53 km WSW of Nanwalek, Alaska<br><strong>Magnitude:</strong> 2.5<br><strong>Coordinates:</strong> (59.2518, -152.834)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fd0c4c5859e9bddc6ddeceed8e70c6e0 = L.circleMarker(
+                [51.3755, -176.6414],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_fd0c4c5859e9bddc6ddeceed8e70c6e0.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 55 km S of Adak, Alaska<br><strong>Magnitude:</strong> 4.8<br><strong>Coordinates:</strong> (51.3755, -176.6414)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3a64fa5885746a24e447ee579e4141ef = L.circleMarker(
+                [38.5367, 39.701],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_3a64fa5885746a24e447ee579e4141ef.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 24 km SW of Kovancılar, Turkey<br><strong>Magnitude:</strong> 4.7<br><strong>Coordinates:</strong> (38.5367, 39.701)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be9dd370864db987c653a02201aa4bfa = L.circleMarker(
+                [38.7864990234375, -122.764167785645],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_be9dd370864db987c653a02201aa4bfa.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 1 km NNW of The Geysers, CA<br><strong>Magnitude:</strong> 2.72<br><strong>Coordinates:</strong> (38.7864990234375, -122.764167785645)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b431cc2bbd8ecbc03966198f4052b965 = L.circleMarker(
+                [51.1127, -178.1648],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_b431cc2bbd8ecbc03966198f4052b965.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 135 km SW of Adak, Alaska<br><strong>Magnitude:</strong> 4<br><strong>Coordinates:</strong> (51.1127, -178.1648)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7540ac220c58eea38aa6f3a8a6c61759 = L.circleMarker(
+                [-46.786, -76.1693],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_7540ac220c58eea38aa6f3a8a6c61759.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 278 km WNW of Cochrane, Chile<br><strong>Magnitude:</strong> 6.2<br><strong>Coordinates:</strong> (-46.786, -76.1693)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c15d9343c816af260e2ba1503a2906e7 = L.circleMarker(
+                [65.3638, -134.7042],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_c15d9343c816af260e2ba1503a2906e7.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 268 km ENE of Dawson City, Canada<br><strong>Magnitude:</strong> 4.1<br><strong>Coordinates:</strong> (65.3638, -134.7042)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3c6f6e8c867d3d666dedaaf165c642f7 = L.circleMarker(
+                [-1.4882, -77.4947],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_e3a21d1aa6de1373fdbfc16f0b3911a6);
+        
+    
+            circle_marker_3c6f6e8c867d3d666dedaaf165c642f7.bindTooltip(
+                `<div>
+                     <strong>Location:</strong> 56 km E of Puyo, Ecuador<br><strong>Magnitude:</strong> 5.1<br><strong>Coordinates:</strong> (-1.4882, -77.4947)
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
+</html>
