@@ -37,7 +37,7 @@ The result is an HTML file with an interactive map that displays recent earthqua
 [Click Sampel Map](sampleMap.JPG)
 <hr>
 
-## How the Code Works (Step-by-Step Breakdown) code
+## How the Code Works (Step-by-Step Breakdown)
 1. Import Required Libraries:
    - folium: Used to create interactive maps. It helps in placing markers and customizing maps.
    - requests: Used to send HTTP requests to external APIs (in this case, the USGS earthquake data API).
